@@ -2,8 +2,17 @@
   "name": "Fujifilm X100VI Visual Field Guide",
   "short_name": "X100VI Guide",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#f3efe6",
   "theme_color": "#11110f",
-  "description": "A mobile-first X100VI quick-reference and photography field guide."
+  "description": "A mobile-first X100VI quick-reference and photography field guide.",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
 }
