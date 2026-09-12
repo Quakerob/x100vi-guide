@@ -1,0 +1,9 @@
+{
+  "name": "Fujifilm X100VI Visual Field Guide",
+  "short_name": "X100VI Guide",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3efe6",
+  "theme_color": "#11110f",
+  "description": "A mobile-first X100VI quick-reference and photography field guide."
+}
