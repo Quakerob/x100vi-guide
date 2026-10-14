@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">  
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#11110f">
@@ -119,6 +120,19 @@ kbd{font-family:inherit;background:#ece6dc;border:1px solid #cfc7ba;border-botto
   .visual-master img{border-radius:14px}
 }
 
+
+/* Personalized shooting setup */
+.setup-matrix{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:15px 0}
+.setup-cell{min-width:0;background:#f5f0e6;border:1px solid var(--line);border-radius:11px;padding:9px 7px;min-height:84px}
+.setup-cell strong{display:block;color:var(--accent);font-size:.68rem;letter-spacing:.09em;margin-bottom:7px}
+.setup-cell span{display:block;font-weight:750;font-size:.79rem;line-height:1.23;overflow-wrap:anywhere}
+.setup-cell em{display:block;font-size:.65rem;color:var(--muted);font-style:normal;margin-top:5px}
+.setup-cell.priority{background:#eee4d5;border-color:#cdbda7}
+.setup-table{width:100%;border-collapse:collapse;font-size:.88rem}
+.setup-table td,.setup-table th{padding:9px 6px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.setup-table th{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+.setup-note{background:#f4ede0;border-left:3px solid var(--accent);padding:12px;border-radius:0 9px 9px 0;font-size:.88rem}
+@media(max-width:420px){.setup-cell{padding:7px 5px;min-height:90px}.setup-cell span{font-size:.72rem}.setup-cell em{font-size:.6rem}}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 </head>
@@ -139,10 +153,59 @@ kbd{font-family:inherit;background:#ece6dc;border:1px solid #cfc7ba;border-botto
 </header>
 
 <nav>
-<a href="#start">Start</a><a href="#visual-guide">Visual guide</a><a href="#map">Control map</a><a href="#scenarios">Scenarios</a><a href="#triangle">Learn</a><a href="#fuji">Fuji tricks</a><a href="#video">Video</a><a href="#custom">C1–C7</a><a href="#rescue">Rescue</a>
+<a href="#start">Start</a><a href="#visual-guide">Visual guide</a><a href="#map">Control map</a><a href="#scenarios">Scenarios</a><a href="#triangle">Learn</a><a href="#fuji">Fuji tricks</a><a href="#setup">My setup</a><a href="#custom">C1–C7</a><a href="#rescue">Rescue</a>
 </nav>
 
 <main class="wrap">
+
+<section class="card" id="setup">
+<div class="kicker" style="color:var(--accent)">Personalized • October 2026</div>
+<h2>My Camera Setup</h2>
+<p class="lead">Family moments, artistic environments, external flash and occasional low-speed burst. Shoot <strong>FINE+RAW</strong>; share the Fujifilm JPEG and keep the RAW for Lightroom.</p>
+<h3>Quick Menu: capture first, recipe second</h3>
+<p class="small">Suggested priority order, left to right and top to bottom. Some items may not be assignable to every Q position or may appear under slightly different camera labels; keep any fixed custom-setting slot the camera requires. The top two rows are the highest priority.</p>
+<div class="setup-matrix" aria-label="Recommended 4 by 4 quick menu layout">
+<div class="setup-cell priority"><strong>01</strong><span>Face/Eye Detection</span><em>Family</em></div>
+<div class="setup-cell priority"><strong>02</strong><span>AF Mode</span><em>Focus area</em></div>
+<div class="setup-cell priority"><strong>03</strong><span>Subject Detection</span><em>Other subjects</em></div>
+<div class="setup-cell priority"><strong>04</strong><span>Film Simulation</span><em>Optional override</em></div>
+<div class="setup-cell priority"><strong>05</strong><span>Flash Function</span><em>External flash</em></div>
+<div class="setup-cell priority"><strong>06</strong><span>Flash Compensation</span><em>TTL adjustment</em></div>
+<div class="setup-cell priority"><strong>07</strong><span>Shutter Type</span><em>Flash compatibility</em></div>
+<div class="setup-cell priority"><strong>08</strong><span>ND Filter</span><em>Bright light</em></div>
+<div class="setup-cell"><strong>09</strong><span>Dynamic Range</span><em>Highlights</em></div>
+<div class="setup-cell"><strong>10</strong><span>White Balance</span><em>Color balance</em></div>
+<div class="setup-cell"><strong>11</strong><span>Self-Timer</span><em>Group portraits</em></div>
+<div class="setup-cell"><strong>12</strong><span>Photometry</span><em>Metering</em></div>
+<div class="setup-cell"><strong>13</strong><span>Highlight Tone</span><em>Recipe tweak</em></div>
+<div class="setup-cell"><strong>14</strong><span>Shadow Tone</span><em>Recipe tweak</em></div>
+<div class="setup-cell"><strong>15</strong><span>Color</span><em>Recipe tweak</em></div>
+<div class="setup-cell"><strong>16</strong><span>High ISO NR</span><em>Recipe tweak</em></div>
+</div>
+<p class="setup-note"><strong>Important:</strong> This grid is a ranked wishlist, not a verified screen-by-screen map of assignable X100VI Q slots. If the camera does not offer a listed function, skip it and keep the next available one. <strong>Select Custom Setting</strong> may occupy a dedicated position; don't remove it just to reproduce the grid.</p>
+<h3>My physical controls and shortcuts</h3>
+<table class="setup-table"><thead><tr><th>Control</th><th>Use</th></tr></thead><tbody>
+<tr><td>Rear command dial press</td><td><strong>Select Custom Setting</strong> — switch C1–C7 (working)</td></tr>
+<tr><td>DRIVE/DELETE</td><td>Choose <strong>CL</strong> low-speed burst when needed</td></tr>
+<tr><td>Focus selector</td><td><strong>AF-S</strong> for still subjects; <strong>AF-C</strong> for movement</td></tr>
+<tr><td>Touch swipe up <em>(suggested)</em></td><td>ISO Auto Setting</td></tr>
+<tr><td>Touch swipe down <em>(suggested)</em></td><td>Bluetooth ON/OFF — disable when not transferring</td></tr>
+<tr><td>Exposure compensation dial</td><td>Brighten/darken quickly without opening menus</td></tr>
+</tbody></table>
+<h3>Installed custom recipes</h3>
+<table class="setup-table"><thead><tr><th>Slot</th><th>Recipe</th><th>When to use</th></tr></thead><tbody>
+<tr><td><strong>C1</strong></td><td>Everyday Family</td><td>Natural color and skin tones</td></tr>
+<tr><td><strong>C2</strong></td><td>WesAndersonlook</td><td>Bold color, symmetry, architecture</td></tr>
+<tr><td><strong>C3</strong></td><td>Howeean Sunset</td><td>Sunrise, sunset and reflections on water</td></tr>
+<tr><td><strong>C4</strong></td><td>DARKSLIDE</td><td>Dramatic black-and-white</td></tr>
+<tr><td><strong>C5–C7</strong></td><td>Open</td><td>Future recipes</td></tr>
+</tbody></table>
+<h3>Two field reminders</h3>
+<p><strong>Moving family subjects:</strong> choose AF-C and CL burst as needed. Use a shutter speed fast enough to stop motion (try 1/500 s for active kids); burst alone will not prevent blur.</p>
+<p><strong>External flash:</strong> check that the flash is enabled and use a compatible shutter mode (mechanical shutter is the safe starting point). Flash compensation affects supported TTL flash setups; manual flash power is adjusted on the flash itself.</p>
+<p class="small"><strong>Recipe protection:</strong> Keep Auto Update Custom Setting disabled if you want temporary adjustments not to overwrite saved looks. A Film Simulation override changes one part of the active recipe; selecting another C slot recalls the full saved recipe.</p>
+</section>
+
 
 <section id="start" class="card">
 <div class="tag kicker" style="color:var(--accent)">The default mindset</div>
@@ -281,9 +344,9 @@ kbd{font-family:inherit;background:#ece6dc;border:1px solid #cfc7ba;border-botto
 
 <article class="card scenario" data-key="everyday travel walkaround family general">
 <div class="tag">Everyday / travel</div><h3>Walkaround — don’t miss it</h3>
-<div class="mini-seq"><div class="mini-step"><div class="mini-num">1</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="20"/><circle class="mini-ring" cx="60" cy="40" r="17"/></svg><strong>Aperture ring → f/4</strong><span>Useful depth + good light</span></div><div class="mini-step"><div class="mini-num">2</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-dark" cx="60" cy="42" r="15"/><circle class="mini-hi" cx="31" cy="22" r="11"/><text x="31" y="25" text-anchor="middle" fill="white" font-size="7" font-weight="800">ISO</text></svg><strong>ISO → AUTO2</strong><span>Protect ~1/250 for people</span></div><div class="mini-step"><div class="mini-num">3</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="18"/><rect class="mini-hi" x="14" y="30" width="7" height="20" rx="2"/></svg><strong>Front selector → S</strong><span>Stationary / casual subjects</span></div></div>
+<div class="mini-seq"><div class="mini-step"><div class="mini-num">1</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="20"/><circle class="mini-ring" cx="60" cy="40" r="17"/></svg><strong>Lens ring → f/4</strong><span>Useful depth + good light</span></div><div class="mini-step"><div class="mini-num">2</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-dark" cx="60" cy="42" r="15"/><circle class="mini-hi" cx="31" cy="22" r="11"/><text x="31" y="25" text-anchor="middle" fill="white" font-size="7" font-weight="800">ISO</text></svg><strong>ISO → AUTO2</strong><span>Protect ~1/250 for people</span></div><div class="mini-step"><div class="mini-num">3</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="18"/><rect class="mini-hi" x="14" y="30" width="7" height="20" rx="2"/></svg><strong>Front selector → S</strong><span>Stationary / casual subjects</span></div></div>
 <div class="settings">
-<div class="setting"><b>Aperture</b><span class="where">📍 Aperture ring · control #3</span><strong>f/4</strong></div><div class="setting"><b>Auto ISO</b><span class="where">📍 Top-left dial · #1</span><strong>AUTO2</strong></div>
+<div class="setting"><b>Aperture</b><span class="where">📍 Lens ring · #3</span><strong>f/4</strong></div><div class="setting"><b>Auto ISO</b><span class="where">📍 Top-left dial · #1</span><strong>AUTO2</strong></div>
 <div class="setting"><b>Focus</b><span class="where">📍 Front-left · #4</span><strong>AF-S</strong></div><div class="setting"><b>AF area</b><strong>Single / Zone</strong></div>
 </div>
 <div class="look"><b>Look:</b> REALA ACE for natural color or Classic Chrome for a restrained documentary feel.</div>
@@ -292,9 +355,9 @@ kbd{font-family:inherit;background:#ece6dc;border:1px solid #cfc7ba;border-botto
 
 <article class="card scenario" data-key="portrait people person family face eye">
 <div class="tag">People</div><h3>Portrait — separate the subject</h3>
-<div class="mini-seq"><div class="mini-step"><div class="mini-num">1</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="20"/><circle class="mini-ring" cx="60" cy="40" r="17"/></svg><strong>Aperture ring → f/2–2.8</strong><span>Separate subject</span></div><div class="mini-step"><div class="mini-num">2</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="18"/><rect class="mini-hi" x="14" y="30" width="7" height="20" rx="2"/></svg><strong>Front selector → S</strong><span>Lock on a steady face</span></div><div class="mini-step"><div class="mini-num">3</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="12" width="94" height="48" rx="7"/><rect class="mini-dark" x="24" y="20" width="55" height="33" rx="3"/><circle class="mini-hi" cx="94" cy="30" r="9"/><text x="94" y="34" text-anchor="middle" fill="white" font-size="10" font-weight="800">Q</text></svg><strong>Q → Face/Eye ON</strong><span>Let the eye be the target</span></div></div>
+<div class="mini-seq"><div class="mini-step"><div class="mini-num">1</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="20"/><circle class="mini-ring" cx="60" cy="40" r="17"/></svg><strong>Lens ring → f/2–2.8</strong><span>Separate subject</span></div><div class="mini-step"><div class="mini-num">2</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="18"/><rect class="mini-hi" x="14" y="30" width="7" height="20" rx="2"/></svg><strong>Front selector → S</strong><span>Lock on a steady face</span></div><div class="mini-step"><div class="mini-num">3</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="12" width="94" height="48" rx="7"/><rect class="mini-dark" x="24" y="20" width="55" height="33" rx="3"/><circle class="mini-hi" cx="94" cy="30" r="9"/><text x="94" y="34" text-anchor="middle" fill="white" font-size="10" font-weight="800">Q</text></svg><strong>Q → Face/Eye ON</strong><span>Let the eye be the target</span></div></div>
 <div class="settings">
-<div class="setting"><b>Aperture</b><span class="where">📍 Aperture ring · control #3</span><strong>f/2–2.8</strong></div><div class="setting"><b>Auto ISO</b><span class="where">📍 Top-left dial · #1</span><strong>AUTO2</strong></div>
+<div class="setting"><b>Aperture</b><span class="where">📍 Lens ring · #3</span><strong>f/2–2.8</strong></div><div class="setting"><b>Auto ISO</b><span class="where">📍 Top-left dial · #1</span><strong>AUTO2</strong></div>
 <div class="setting"><b>Focus</b><span class="where">📍 Front-left · #4</span><strong>AF-S</strong></div><div class="setting"><b>Detection</b><strong>Face/Eye ON</strong></div>
 </div>
 <div class="look"><b>Look:</b> ASTIA for gentle color/skin, PRO Neg. Std for subtle portraits, or ACROS for character.</div>
@@ -305,7 +368,7 @@ kbd{font-family:inherit;background:#ece6dc;border:1px solid #cfc7ba;border-botto
 <div class="tag">Action</div><h3>Kids / pets / motion — protect shutter speed</h3>
 <div class="mini-seq"><div class="mini-step"><div class="mini-num">1</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="18"/><rect class="mini-hi" x="14" y="30" width="7" height="20" rx="2"/></svg><strong>Front selector → C</strong><span>Continuously refocus</span></div><div class="mini-step"><div class="mini-num">2</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-dark" cx="60" cy="42" r="15"/><circle class="mini-hi" cx="31" cy="22" r="11"/><text x="31" y="25" text-anchor="middle" fill="white" font-size="7" font-weight="800">ISO</text></svg><strong>ISO → AUTO3</strong><span>Protect a fast shutter</span></div><div class="mini-step"><div class="mini-num">3</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="12" width="94" height="48" rx="7"/><rect class="mini-dark" x="24" y="20" width="55" height="33" rx="3"/><circle class="mini-hi" cx="94" cy="30" r="9"/><text x="94" y="34" text-anchor="middle" fill="white" font-size="10" font-weight="800">Q</text></svg><strong>Q → Zone/Wide AF</strong><span>Give movement room</span></div></div>
 <div class="settings">
-<div class="setting"><b>Aperture</b><span class="where">📍 Aperture ring · control #3</span><strong>f/2–4</strong></div><div class="setting"><b>Auto ISO</b><span class="where">📍 Top-left dial · #1</span><strong>AUTO3</strong></div>
+<div class="setting"><b>Aperture</b><span class="where">📍 Lens ring · #3</span><strong>f/2–4</strong></div><div class="setting"><b>Auto ISO</b><span class="where">📍 Top-left dial · #1</span><strong>AUTO3</strong></div>
 <div class="setting"><b>Focus</b><span class="where">📍 Front-left · #4</span><strong>AF-C</strong></div><div class="setting"><b>AF area</b><strong>Zone / Wide</strong></div>
 </div>
 <div class="look"><b>Look:</b> PROVIA or REALA ACE. Keep the rendering predictable while timing is difficult.</div>
@@ -314,9 +377,9 @@ kbd{font-family:inherit;background:#ece6dc;border:1px solid #cfc7ba;border-botto
 
 <article class="card scenario" data-key="street documentary city candid people">
 <div class="tag">Street</div><h3>Street — fast, discreet, ready</h3>
-<div class="mini-seq"><div class="mini-step"><div class="mini-num">1</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="20"/><circle class="mini-ring" cx="60" cy="40" r="17"/></svg><strong>Aperture ring → f/5.6</strong><span>More focus tolerance</span></div><div class="mini-step"><div class="mini-num">2</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="18"/><rect class="mini-hi" x="14" y="30" width="7" height="20" rx="2"/></svg><strong>Front selector → C</strong><span>Distance keeps changing</span></div><div class="mini-step"><div class="mini-num">3</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-dark" cx="60" cy="42" r="15"/><circle class="mini-hi" cx="31" cy="22" r="11"/><text x="31" y="25" text-anchor="middle" fill="white" font-size="7" font-weight="800">ISO</text></svg><strong>ISO → AUTO2</strong><span>Keep shutter responsive</span></div></div>
+<div class="mini-seq"><div class="mini-step"><div class="mini-num">1</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="20"/><circle class="mini-ring" cx="60" cy="40" r="17"/></svg><strong>Lens ring → f/5.6</strong><span>More focus tolerance</span></div><div class="mini-step"><div class="mini-num">2</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="18"/><rect class="mini-hi" x="14" y="30" width="7" height="20" rx="2"/></svg><strong>Front selector → C</strong><span>Distance keeps changing</span></div><div class="mini-step"><div class="mini-num">3</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-dark" cx="60" cy="42" r="15"/><circle class="mini-hi" cx="31" cy="22" r="11"/><text x="31" y="25" text-anchor="middle" fill="white" font-size="7" font-weight="800">ISO</text></svg><strong>ISO → AUTO2</strong><span>Keep shutter responsive</span></div></div>
 <div class="settings">
-<div class="setting"><b>Aperture</b><span class="where">📍 Aperture ring · control #3</span><strong>f/5.6</strong></div><div class="setting"><b>Auto ISO</b><span class="where">📍 Top-left dial · #1</span><strong>AUTO2</strong></div>
+<div class="setting"><b>Aperture</b><span class="where">📍 Lens ring · #3</span><strong>f/5.6</strong></div><div class="setting"><b>Auto ISO</b><span class="where">📍 Top-left dial · #1</span><strong>AUTO2</strong></div>
 <div class="setting"><b>Focus</b><span class="where">📍 Front-left · #4</span><strong>AF-C</strong></div><div class="setting"><b>AF area</b><strong>Zone</strong></div>
 </div>
 <div class="look"><b>Look:</b> Classic Chrome for documentary restraint; Classic Neg. for stronger nostalgic color; ACROS for shape and gesture.</div>
@@ -325,9 +388,9 @@ kbd{font-family:inherit;background:#ece6dc;border:1px solid #cfc7ba;border-botto
 
 <article class="card scenario" data-key="landscape architecture building outdoors scenery travel">
 <div class="tag">Landscape / architecture</div><h3>Maximum detail — slow down</h3>
-<div class="mini-seq"><div class="mini-step"><div class="mini-num">1</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="20"/><circle class="mini-ring" cx="60" cy="40" r="17"/></svg><strong>Aperture ring → f/5.6–8</strong><span>More scene in focus</span></div><div class="mini-step"><div class="mini-num">2</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-dark" cx="60" cy="42" r="15"/><circle class="mini-hi" cx="31" cy="22" r="11"/><text x="31" y="25" text-anchor="middle" fill="white" font-size="7" font-weight="800">ISO</text></svg><strong>ISO → AUTO1</strong><span>Favor image quality</span></div><div class="mini-step"><div class="mini-num">3</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-dark" cx="60" cy="42" r="15"/><circle class="mini-hi" cx="91" cy="22" r="10"/><text x="91" y="26" text-anchor="middle" fill="white" font-size="10" font-weight="800">±</text></svg><strong>Top-right ± dial</strong><span>Protect bright highlights</span></div></div>
+<div class="mini-seq"><div class="mini-step"><div class="mini-num">1</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="20"/><circle class="mini-ring" cx="60" cy="40" r="17"/></svg><strong>Lens ring → f/5.6–8</strong><span>More scene in focus</span></div><div class="mini-step"><div class="mini-num">2</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-dark" cx="60" cy="42" r="15"/><circle class="mini-hi" cx="31" cy="22" r="11"/><text x="31" y="25" text-anchor="middle" fill="white" font-size="7" font-weight="800">ISO</text></svg><strong>ISO → AUTO1</strong><span>Favor image quality</span></div><div class="mini-step"><div class="mini-num">3</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-dark" cx="60" cy="42" r="15"/><circle class="mini-hi" cx="91" cy="22" r="10"/><text x="91" y="26" text-anchor="middle" fill="white" font-size="10" font-weight="800">±</text></svg><strong>Top-right ± dial</strong><span>Protect bright highlights</span></div></div>
 <div class="settings">
-<div class="setting"><b>Aperture</b><span class="where">📍 Aperture ring · control #3</span><strong>f/5.6–8</strong></div><div class="setting"><b>Auto ISO</b><span class="where">📍 Top-left dial · #1</span><strong>AUTO1</strong></div>
+<div class="setting"><b>Aperture</b><span class="where">📍 Lens ring · #3</span><strong>f/5.6–8</strong></div><div class="setting"><b>Auto ISO</b><span class="where">📍 Top-left dial · #1</span><strong>AUTO1</strong></div>
 <div class="setting"><b>Focus</b><span class="where">📍 Front-left · #4</span><strong>AF-S</strong></div><div class="setting"><b>Exposure</b><strong>Watch highlights</strong></div>
 </div>
 <div class="look"><b>Look:</b> Velvia for lush color (use with restraint), REALA ACE for natural scenes, ACROS+R for dramatic skies.</div>
@@ -336,31 +399,20 @@ kbd{font-family:inherit;background:#ece6dc;border:1px solid #cfc7ba;border-botto
 
 <article class="card scenario" data-key="night low light indoor restaurant bar evening dark">
 <div class="tag">Low light</div><h3>Night / indoors — embrace ISO</h3>
-<div class="mini-seq"><div class="mini-step"><div class="mini-num">1</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="20"/><circle class="mini-ring" cx="60" cy="40" r="17"/></svg><strong>Aperture ring → f/2</strong><span>Gather maximum light</span></div><div class="mini-step"><div class="mini-num">2</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-dark" cx="60" cy="42" r="15"/><circle class="mini-hi" cx="31" cy="22" r="11"/><text x="31" y="25" text-anchor="middle" fill="white" font-size="7" font-weight="800">ISO</text></svg><strong>ISO → AUTO2</strong><span>Let sensitivity rise</span></div><div class="mini-step"><div class="mini-num">3</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-dark" cx="60" cy="42" r="15"/><circle class="mini-hi" cx="91" cy="22" r="10"/><text x="91" y="26" text-anchor="middle" fill="white" font-size="10" font-weight="800">±</text></svg><strong>Watch shutter speed</strong><span>Keep people ≥1/125</span></div></div>
+<div class="mini-seq"><div class="mini-step"><div class="mini-num">1</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="20"/><circle class="mini-ring" cx="60" cy="40" r="17"/></svg><strong>Lens ring → f/2</strong><span>Gather maximum light</span></div><div class="mini-step"><div class="mini-num">2</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-dark" cx="60" cy="42" r="15"/><circle class="mini-hi" cx="31" cy="22" r="11"/><text x="31" y="25" text-anchor="middle" fill="white" font-size="7" font-weight="800">ISO</text></svg><strong>ISO → AUTO2</strong><span>Let sensitivity rise</span></div><div class="mini-step"><div class="mini-num">3</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-dark" cx="60" cy="42" r="15"/><circle class="mini-hi" cx="91" cy="22" r="10"/><text x="91" y="26" text-anchor="middle" fill="white" font-size="10" font-weight="800">±</text></svg><strong>Watch shutter speed</strong><span>Keep people ≥1/125</span></div></div>
 <div class="settings">
-<div class="setting"><b>Aperture</b><span class="where">📍 Aperture ring · control #3</span><strong>f/2</strong></div><div class="setting"><b>Auto ISO</b><span class="where">📍 Top-left dial · #1</span><strong>AUTO2</strong></div>
+<div class="setting"><b>Aperture</b><span class="where">📍 Lens ring · #3</span><strong>f/2</strong></div><div class="setting"><b>Auto ISO</b><span class="where">📍 Top-left dial · #1</span><strong>AUTO2</strong></div>
 <div class="setting"><b>Focus</b><span class="where">📍 Front-left · #4</span><strong>AF-S</strong></div><div class="setting"><b>Shutter check</b><strong>≥ 1/125 people</strong></div>
 </div>
 <div class="look"><b>Look:</b> Nostalgic Neg. for warm ambience, ETERNA for subdued color, ACROS for noisy/moody scenes.</div>
 <details><summary>What am I learning?</summary><p>A sharp ISO 6400 photograph is usually better than a blurry ISO 800 photograph. IBIS helps with stationary scenes, but people still move. Open to f/2 and let ISO rise before sacrificing a usable shutter speed.</p></details>
 </article>
 
-<article class="card scenario" data-key="night fill flash portrait people evening dark ttl built in flash">
-<div class="tag">Night + fill flash</div><h3>Keep the night — add just enough light</h3>
-<div class="mini-seq"><div class="mini-step"><div class="mini-num">1</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="20"/><circle class="mini-ring" cx="60" cy="40" r="17"/></svg><strong>Aperture ring → f/2–2.8</strong><span>Expose the ambient scene</span></div><div class="mini-step"><div class="mini-num">2</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-hi" cx="31" cy="22" r="11"/><text x="31" y="25" text-anchor="middle" fill="white" font-size="7" font-weight="800">TTL</text></svg><strong>Flash → TTL</strong><span>Built-in flash stays flush</span></div><div class="mini-step"><div class="mini-num">3</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-hi" cx="91" cy="22" r="10"/><text x="91" y="26" text-anchor="middle" fill="white" font-size="8" font-weight="800">–1</text></svg><strong>Flash comp → –1 EV</strong><span>Fill, don’t overpower</span></div></div>
-<div class="settings">
-<div class="setting"><b>Aperture</b><span class="where">📍 Aperture ring · control #3</span><strong>f/2–2.8</strong></div><div class="setting"><b>Shutter</b><strong>1/60–1/125</strong></div>
-<div class="setting"><b>Flash mode</b><strong>TTL</strong></div><div class="setting"><b>Flash compensation</b><strong>Start –1 EV</strong></div>
-</div>
-<div class="look"><b>Goal:</b> ambient light builds the background; the built-in flash gently lifts a nearby face or subject.</div>
-<details><summary>What am I learning?</summary><p>Think of flash as a second exposure layered onto the ambient scene. First preserve the mood of the night, then add only enough flash to help the subject. If the flash looks obvious, reduce flash compensation. Keep the subject fairly close because the built-in flash is small.</p><p class="small"><strong>If it will not fire:</strong> use the mechanical shutter (MS), confirm flash is enabled, and check that you are not in a drive or silent setting that disables flash.</p></details>
-</article>
-
 <article class="card scenario" data-key="bright sun sunny portrait shallow depth field nd filter outdoors noon">
 <div class="tag">Bright sun</div><h3>f/2 in daylight — use the built-in ND</h3>
-<div class="mini-seq"><div class="mini-step"><div class="mini-num">1</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="20"/><circle class="mini-ring" cx="60" cy="40" r="17"/></svg><strong>Aperture ring → f/2</strong><span>Shallow depth of field</span></div><div class="mini-step"><div class="mini-num">2</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="20"/><circle cx="60" cy="40" r="14" fill="#9c2f2f"/><text x="60" y="44" text-anchor="middle" fill="white" font-size="9" font-weight="800">ND</text></svg><strong>Q/Fn → ND ON</strong><span>Four-stop sunglasses</span></div><div class="mini-step"><div class="mini-num">3</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-dark" cx="60" cy="42" r="15"/><circle class="mini-hi" cx="91" cy="22" r="10"/><text x="91" y="26" text-anchor="middle" fill="white" font-size="10" font-weight="800">±</text></svg><strong>Top-right ± dial</strong><span>Fine-tune brightness</span></div></div>
+<div class="mini-seq"><div class="mini-step"><div class="mini-num">1</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="20"/><circle class="mini-ring" cx="60" cy="40" r="17"/></svg><strong>Lens ring → f/2</strong><span>Shallow depth of field</span></div><div class="mini-step"><div class="mini-num">2</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="20"/><circle cx="60" cy="40" r="14" fill="#9c2f2f"/><text x="60" y="44" text-anchor="middle" fill="white" font-size="9" font-weight="800">ND</text></svg><strong>Q/Fn → ND ON</strong><span>Four-stop sunglasses</span></div><div class="mini-step"><div class="mini-num">3</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-dark" cx="60" cy="42" r="15"/><circle class="mini-hi" cx="91" cy="22" r="10"/><text x="91" y="26" text-anchor="middle" fill="white" font-size="10" font-weight="800">±</text></svg><strong>Top-right ± dial</strong><span>Fine-tune brightness</span></div></div>
 <div class="settings">
-<div class="setting"><b>Aperture</b><span class="where">📍 Aperture ring · control #3</span><strong>f/2</strong></div><div class="setting"><b>ND filter</b><strong>ON</strong></div>
+<div class="setting"><b>Aperture</b><span class="where">📍 Lens ring · #3</span><strong>f/2</strong></div><div class="setting"><b>ND filter</b><strong>ON</strong></div>
 <div class="setting"><b>ISO</b><strong>Auto / low</strong></div><div class="setting"><b>Exposure</b><strong>Check highlights</strong></div>
 </div>
 <div class="look"><b>Look:</b> ASTIA for people; Classic Chrome for harsh midday color.</div>
@@ -369,9 +421,9 @@ kbd{font-family:inherit;background:#ece6dc;border:1px solid #cfc7ba;border-botto
 
 <article class="card scenario" data-key="detail close up macro flower food object leather craft">
 <div class="tag">Close detail</div><h3>Food / craft / details — place focus carefully</h3>
-<div class="mini-seq"><div class="mini-step"><div class="mini-num">1</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="20"/><circle class="mini-ring" cx="60" cy="40" r="17"/></svg><strong>Aperture ring → f/4–5.6</strong><span>Enough close-up depth</span></div><div class="mini-step"><div class="mini-num">2</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="18"/><rect class="mini-hi" x="14" y="30" width="7" height="20" rx="2"/></svg><strong>Front selector → S</strong><span>Subject is stationary</span></div><div class="mini-step"><div class="mini-num">3</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="12" width="94" height="48" rx="7"/><rect class="mini-dark" x="24" y="20" width="55" height="33" rx="3"/><circle class="mini-hi" cx="89" cy="40" r="8"/><path class="mini-arrow" d="M89 25v7M89 48v7M74 40h7M97 40h7"/></svg><strong>Joystick → focus point</strong><span>Put sharpness precisely</span></div></div>
+<div class="mini-seq"><div class="mini-step"><div class="mini-num">1</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="20"/><circle class="mini-ring" cx="60" cy="40" r="17"/></svg><strong>Lens ring → f/4–5.6</strong><span>Enough close-up depth</span></div><div class="mini-step"><div class="mini-num">2</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="17" width="94" height="43" rx="7"/><circle class="mini-dark" cx="60" cy="40" r="18"/><rect class="mini-hi" x="14" y="30" width="7" height="20" rx="2"/></svg><strong>Front selector → S</strong><span>Subject is stationary</span></div><div class="mini-step"><div class="mini-num">3</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="12" width="94" height="48" rx="7"/><rect class="mini-dark" x="24" y="20" width="55" height="33" rx="3"/><circle class="mini-hi" cx="89" cy="40" r="8"/><path class="mini-arrow" d="M89 25v7M89 48v7M74 40h7M97 40h7"/></svg><strong>Joystick → focus point</strong><span>Put sharpness precisely</span></div></div>
 <div class="settings">
-<div class="setting"><b>Aperture</b><span class="where">📍 Aperture ring · control #3</span><strong>f/4–5.6</strong></div><div class="setting"><b>Auto ISO</b><span class="where">📍 Top-left dial · #1</span><strong>AUTO1/2</strong></div>
+<div class="setting"><b>Aperture</b><span class="where">📍 Lens ring · #3</span><strong>f/4–5.6</strong></div><div class="setting"><b>Auto ISO</b><span class="where">📍 Top-left dial · #1</span><strong>AUTO1/2</strong></div>
 <div class="setting"><b>Focus</b><span class="where">📍 Front-left · #4</span><strong>AF-S</strong></div><div class="setting"><b>AF area</b><strong>Small point</strong></div>
 </div>
 <div class="look"><b>Look:</b> REALA ACE for honest material color; Classic Neg. for a stylized editorial feel.</div>
@@ -393,7 +445,7 @@ kbd{font-family:inherit;background:#ece6dc;border:1px solid #cfc7ba;border-botto
 <div class="tag">Black & white</div><h3>See light, not color</h3>
 <div class="mini-seq"><div class="mini-step"><div class="mini-num">1</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="12" width="94" height="48" rx="7"/><rect class="mini-dark" x="24" y="20" width="55" height="33" rx="3"/><circle class="mini-hi" cx="94" cy="30" r="9"/><text x="94" y="34" text-anchor="middle" fill="white" font-size="10" font-weight="800">Q</text></svg><strong>Q → ACROS</strong><span>Remove color distraction</span></div><div class="mini-step"><div class="mini-num">2</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="22" width="94" height="38" rx="7"/><circle class="mini-dark" cx="60" cy="42" r="15"/><circle class="mini-hi" cx="91" cy="22" r="10"/><text x="91" y="26" text-anchor="middle" fill="white" font-size="10" font-weight="800">±</text></svg><strong>Top-right ± dial</strong><span>Try –1/3 EV</span></div><div class="mini-step"><div class="mini-num">3</div><svg viewBox="0 0 120 70"><rect class="mini-cam" x="13" y="12" width="94" height="48" rx="7"/><rect class="mini-dark" x="24" y="20" width="55" height="33" rx="3"/><circle class="mini-hi" cx="89" cy="40" r="8"/><path class="mini-arrow" d="M89 25v7M89 48v7M74 40h7M97 40h7"/></svg><strong>Frame deliberately</strong><span>Seek shape + contrast</span></div></div>
 <div class="settings">
-<div class="setting"><b>Simulation</b><strong>ACROS</strong></div><div class="setting"><b>Aperture</b><span class="where">📍 Aperture ring · control #3</span><strong>Scene dependent</strong></div>
+<div class="setting"><b>Simulation</b><strong>ACROS</strong></div><div class="setting"><b>Aperture</b><span class="where">📍 Lens ring · #3</span><strong>Scene dependent</strong></div>
 <div class="setting"><b>Exposure comp.</b><span class="where">📍 Top-right · #2</span><strong>Try –1/3</strong></div><div class="setting"><b>Watch</b><strong>Shape + contrast</strong></div>
 </div>
 <div class="look"><b>Look:</b> ACROS; try the red-filter version for darker skies and stronger cloud separation.</div>
@@ -418,7 +470,6 @@ kbd{font-family:inherit;background:#ece6dc;border:1px solid #cfc7ba;border-botto
 <div class="kicker" style="color:var(--accent)">The clever Fuji stuff</div>
 <h2>What the controls actually do</h2>
 
-<div class="check"><div class="dot">VF</div><div><strong>Front viewfinder lever = OVF / EVF / ERF selector.</strong> The small lever on the front of the camera switches the hybrid viewfinder display. It is <strong>not</strong> a Noise Reduction control. Think “viewfinder,” not “NR.”</div></div>
 <div class="check"><div class="dot">Q</div><div><strong>Quick Menu = your dashboard.</strong> Press <kbd>Q</kbd> for frequently changed settings. Highlight one with the focus stick and turn the rear command dial. Long-press Q to edit the menu/custom setting workflow.</div></div>
 <div class="check"><div class="dot">±</div><div><strong>Exposure Compensation = “I want this brighter/darker.”</strong> It biases the camera’s automatic exposure without forcing you into full manual. Use it constantly; it is one of the most photographic controls on the camera.</div></div>
 <div class="check"><div class="dot">AF</div><div><strong>AF-S = focus, then stop.</strong> Best for subjects whose distance is not changing much. <strong>AF-C = keep updating.</strong> Best when subject distance is changing.</div></div>
@@ -427,22 +478,6 @@ kbd{font-family:inherit;background:#ece6dc;border:1px solid #cfc7ba;border-botto
 <div class="check"><div class="dot">DR</div><div><strong>Dynamic Range = highlight insurance.</strong> DR200/400 can protect bright tones by requiring higher ISO and altering tonal processing. Useful in hard sun; not something you need to micromanage every frame.</div></div>
 <div class="check"><div class="dot">FS</div><div><strong>Film Simulation = the color/tonal personality.</strong> PROVIA is neutral, Velvia vivid, ASTIA softer, Classic Chrome restrained/documentary, Classic Neg. punchier nostalgia, REALA ACE natural with character, ETERNA subdued/cinematic, ACROS monochrome.</div></div>
 <div class="check"><div class="dot">R</div><div><strong>Recipe = Film Simulation plus supporting ingredients.</strong> White balance/shift, tone curve, color, grain, Color Chrome effects, sharpness, noise reduction and clarity can all reshape the JPEG. A recipe is a starting aesthetic—not a technical requirement.</div></div>
-<div class="rule"></div>
-<h3>Noise Reduction: setup item, not a shooting control</h3>
-<p><strong>High ISO NR</strong> affects JPEG noise processing and can usually be left at your preferred recipe setting. <strong>Long Exposure NR</strong> is for genuinely long exposures and may make the camera spend additional time processing after the shot. Neither belongs in your normal three-move shooting workflow.</p>
-</section>
-
-<section id="video" class="card">
-<div class="kicker" style="color:var(--accent)">Occasional video</div>
-<h2>Quick video test — keep it simple</h2>
-<p class="lead">Still photography is the home base. When you want to test video, use a simple known-good setup rather than diving into every movie option.</p>
-<div class="settings">
-<div class="setting"><b>Movie mode</b><strong>Switch to Movie</strong><span class="small">Use the camera’s movie/still control.</span></div>
-<div class="setting"><b>Resolution</b><strong>4K / 30p</strong><span class="small">A straightforward quality starting point.</span></div>
-<div class="setting"><b>Aperture</b><strong>f/2.8–4</strong><span class="small">Enough light with a little focusing tolerance.</span></div>
-<div class="setting"><b>Focus</b><strong>AF-C</strong><span class="small">Useful for handheld clips and changing subject distance.</span></div>
-</div>
-<div class="why"><strong>Field rule:</strong> don’t chase bitrate settings just to prove video works. Record a short clip, stop recording, then use playback to confirm the file. Once that works, explore higher-quality formats only when you actually need them.</div>
 </section>
 
 <section id="custom" class="card">
@@ -472,8 +507,7 @@ kbd{font-family:inherit;background:#ece6dc;border:1px solid #cfc7ba;border-botto
 <div class="check"><div class="dot">3</div><div><strong>Moving subject keeps escaping focus?</strong> Switch AF-S → AF-C and use Zone/Wide.</div></div>
 <div class="check"><div class="dot">4</div><div><strong>Photo too dark/bright even though exposure is “correct”?</strong> Turn the exposure-compensation dial. Trust the picture, not zero.</div></div>
 <div class="check"><div class="dot">5</div><div><strong>Can’t use f/2 in bright sun?</strong> Turn ND filter ON.</div></div>
-<div class="check"><div class="dot">6</div><div><strong>Need just a little light on a person at night?</strong> Keep the ambient exposure you like → TTL flash → start around –1 EV flash compensation.</div></div>
-<div class="check"><div class="dot">7</div><div><strong>Too much menu confusion?</strong> Return to: shutter A • ISO A • aperture f/4 • AF-S • REALA ACE • exposure comp 0. Then solve one problem at a time.</div></div>
+<div class="check"><div class="dot">6</div><div><strong>Too much menu confusion?</strong> Return to: shutter A • ISO A • aperture f/4 • AF-S • REALA ACE • exposure comp 0. Then solve one problem at a time.</div></div>
 </section>
 
 <section class="card">
